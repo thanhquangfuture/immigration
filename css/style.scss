@@ -476,6 +476,7 @@ section {
     }
 }
 .blogs {
+    background: $light;
     .slide {
         text-align: center;
         width: 35rem;
@@ -664,7 +665,7 @@ section {
 
             a {
                 margin: 1rem 0;
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             #nav-close {
                 display: block;
