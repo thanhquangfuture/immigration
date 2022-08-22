@@ -84,16 +84,27 @@ section {
 
 .navbar {
     a {
+        position: relative;
         margin-left: 2rem;
         font-size: 2rem;
         color: $black;
-        &:hover {
-            color: $main;
-            border-bottom: .2rem solid $main;
-            padding: .7px 0 0 0;
-            // transition: linear;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: $main;
+            transition-property: width;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+        }
+        &:hover::after {
+            width: 100%;
         }
     }
+    
     #nav-close {
         font-size: 5rem;
         cursor: pointer;
@@ -638,6 +649,24 @@ section {
                 }
                 
             }
+        }
+    }
+    .go-top {
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        padding: 1em;
+        display: none;
+        z-index: 10000;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+        &:hover {
+            scale: 1.2;
         }
     }
     .credit {

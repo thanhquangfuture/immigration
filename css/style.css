@@ -79,15 +79,30 @@ section {
 }
 
 .navbar a {
+  position: relative;
   margin-left: 2rem;
   font-size: 2rem;
   color: #10221b;
 }
 
-.navbar a:hover {
-  color: #003a24;
-  border-bottom: 0.2rem solid #003a24;
-  padding: .7px 0 0 0;
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #003a24;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 .navbar #nav-close {
@@ -802,6 +817,27 @@ section {
 .footer .box-container .box a i {
   color: #fcd44e;
   padding-right: 2rem;
+}
+
+.footer .go-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  padding: 1em;
+  display: none;
+  z-index: 10000;
+}
+
+.footer .go-top img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer .go-top:hover {
+  scale: 1.2;
 }
 
 .footer .credit {
