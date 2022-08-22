@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
-$main: #007042;
+$main: #003a24;
+$yellow: #fcd44e;
 $black: #10221b;
 $white: #fff;
 $light: #eee;
@@ -7,7 +8,7 @@ $border: .1rem solid $black;
 $box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 
 :root {
-    --swiper-theme-color: #007042;
+    --swiper-theme-color: #003a24;
 }
 
 * {
@@ -77,8 +78,6 @@ section {
         img {
             width: 70px;
             height: 70px;
-            border-radius: 20%;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
     }
 }
@@ -263,8 +262,6 @@ section {
         flex: 1 1 30rem;
         img {
             width: 100%;
-            border-radius: 10%;
-            box-shadow: .5rem .5rem 0 rgba(0,0,0,.1);
         }
     }
     .content {
@@ -281,11 +278,6 @@ section {
             line-height: 2;
             text-align: justify;
             text-transform: none;
-        }
-    }
-    &:hover {
-        img {
-            box-shadow: 1rem 1rem 0 rgba(0,0,0,.5);
         }
     }
 }
@@ -524,13 +516,51 @@ section {
 .newsletter {
     background: $light;
     .content {
-        max-width: 70rem;
+        display: grid;
+        grid-template-columns: 4.5fr .5fr 4.5fr;
+        // max-width: 80rem;
         margin: 1rem auto;
-        text-align: center;
-        p {
-            font-size: 1.5rem;
-            line-height: 2;
-            color: $black;
+        .meeting {
+            width: 100%;
+            input,
+            textarea,
+            .form-control {
+                display: block;
+                width: 100%;
+                height: 34px;
+                margin: 0 .5rem 2rem .5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 6px 12px;
+                &:focus {
+                    border-color: $main;
+                    outline: none;
+                    box-shadow: inset 0 0 1px rgb(1, 93, 31), 0 0 8px rgb(1, 50, 46);
+                }
+                ::placeholder {
+                    padding-left: 1rem;
+                }
+            }
+            .meetinglable {
+                display: inline-block;
+                max-width: 100%;
+                margin-left: 1rem;
+                font-size: 1.5rem;
+            }
+            .note {
+                height: auto;
+            }
+            .btn {
+                line-height: auto;
+                cursor: pointer;
+                font-size: 1.5rem;
+                &:hover {
+                    color: $white;
+                    background: $main;
+                    box-shadow: inset 0 0 1px rgb(1, 93, 31), 0 0 8px rgb(1, 50, 46);
+                }
+            }
+            
         }
         form {
             margin-top: 2rem;
@@ -561,6 +591,13 @@ section {
                 }
             }
         }
+        .map {
+            iframe {
+                margin-top: 2rem;
+                width: 500px;
+                height: 300px;
+            }
+        }
     }
 }
 .clients {
@@ -577,14 +614,14 @@ section {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: .5rem 5rem .5rem 10rem;
+    padding: .5rem 5rem .5rem 15rem;
     .box-container {
         @include grid(25rem);
         .box {
             h3 {
                 font-size: 2rem;
                 padding: 1rem 0;
-                color: $main;
+                color: $yellow;
             }
             .email {
                 text-transform: lowercase !important;
@@ -596,7 +633,7 @@ section {
                 padding: 1rem 0;
                 
                 i {
-                    color: $main;
+                    color: $yellow;
                     padding-right: 2rem;
                 }
                 
@@ -609,7 +646,7 @@ section {
         padding: .5rem;
         color: $white;
         span {
-            color: $main;
+            color: $yellow;
         }
     }
 }

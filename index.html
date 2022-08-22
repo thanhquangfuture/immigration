@@ -240,7 +240,7 @@
     <!-- shop section ends -->
     <!-- blog section start -->
     <section id="blogs" class="blogs">
-        <h1 class="heading">Khách hàng thành công</h1>
+        <h1 class="heading">Câu chuyện thành công</h1>
         <div class="swiper blogs-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
@@ -505,13 +505,35 @@
     <!-- client section ends -->
      <!-- newsletter section starts -->
      <section class="newsletter">
+        <h1 class="heading">Đặt lịch hẹn tư vấn</h1>
         <div class="content">
-            <h1 class="heading">subscriber now</h1>             
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, molestias id autem eos veniam animi quaerat. Amet molestiae quis dignissimos</p>
-            <form action="">
-                <input type="email" name="" placeholder="enter your email" class="email">
-                <input type="submit" value="submit" class="btn">
-            </form>
+            <div class="meeting">
+                <label for class="meetinglable">Họ và tên</label>
+                <input type="text" name="fullname" placeholder="" class="form-control name" required>
+                <label for class="meetinglable">Email</label>
+                <input type="email" name="" placeholder="" class="form-control email" required>
+                <label for class="meetinglable">Điện thoại</label>
+                <input type="text" name="" placeholder="" class="form-control phone" required>
+                <div>
+                    <select type="text" name="" placeholder="Thời gian" id="time" class="form-control time">
+                        <option value="Thời gian">Thời gian</option>
+                        <option value="Sáng">Sáng</option>
+                        <option value="Chiều">Chiều</option>
+                    </select>
+                </div>
+                <textarea type="text" name="" placeholder="Nội dung cần tư vấn" class="form-control note"></textarea>
+                <input type="submit" value="Đặt hẹn trước" class="btn">
+            </div>    
+            <div></div>        
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3429467261285!2d106.69512121428703!3d10.785024061985292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f35c962acf5%3A0x1fa42a3bd157f95b!2zMjMgUGjDuW5nIEto4bqvYyBLaG9hbiwgxJBhIEthbywgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1661019808830!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- <form action="">
+                
+            </form> -->
+        </div>
+        <div class="map">
+            
         </div>
     </section>
     <!-- newsletter section ends -->

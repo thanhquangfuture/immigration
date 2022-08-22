@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 :root {
-  --swiper-theme-color: #007042;
+  --swiper-theme-color: #003a24;
 }
 
 * {
@@ -44,7 +44,7 @@ section {
   text-align: center;
   margin-bottom: 2.5rem;
   font-size: 3rem;
-  color: #007042;
+  color: #003a24;
   text-transform: uppercase;
 }
 
@@ -76,9 +76,6 @@ section {
 .header .logo img {
   width: 70px;
   height: 70px;
-  border-radius: 20%;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .navbar a {
@@ -88,8 +85,8 @@ section {
 }
 
 .navbar a:hover {
-  color: #007042;
-  border-bottom: 0.2rem solid #007042;
+  color: #003a24;
+  border-bottom: 0.2rem solid #003a24;
   padding: .7px 0 0 0;
 }
 
@@ -108,7 +105,7 @@ section {
 }
 
 .icons div:hover {
-  color: #007042;
+  color: #003a24;
 }
 
 #menu-btn {
@@ -151,7 +148,7 @@ section {
 }
 
 .search-form #close-search:hover {
-  color: #007042;
+  color: #003a24;
 }
 
 .search-form form {
@@ -199,7 +196,7 @@ section {
 }
 
 .search-form form label:hover {
-  color: #007042;
+  color: #003a24;
 }
 
 .home {
@@ -239,7 +236,7 @@ section {
 
 .home .box .content h3 {
   font-size: 6rem;
-  color: #007042;
+  color: #003a24;
   padding-top: .5rem;
   text-transform: uppercase;
 }
@@ -254,7 +251,7 @@ section {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 2rem;
-  color: #007042;
+  color: #003a24;
 }
 
 .category .box-container {
@@ -279,7 +276,7 @@ section {
 
 .category .box-container .box h3 {
   font-size: 2rem;
-  color: #007042;
+  color: #003a24;
 }
 
 .category .box-container .box p {
@@ -296,7 +293,7 @@ section {
 }
 
 .category .box-container .box:hover p {
-  color: #007042;
+  color: #003a24;
 }
 
 .about {
@@ -320,9 +317,6 @@ section {
 
 .about .image img {
   width: 100%;
-  border-radius: 10%;
-  -webkit-box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .about .content {
@@ -334,7 +328,7 @@ section {
 
 .about .content h3 {
   font-size: 4rem;
-  color: #007042;
+  color: #003a24;
 }
 
 .about .content p {
@@ -344,11 +338,6 @@ section {
   line-height: 2;
   text-align: justify;
   text-transform: none;
-}
-
-.about:hover img {
-  -webkit-box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.5);
 }
 
 .shop .slide {
@@ -481,7 +470,7 @@ section {
 
 .package .box-container .box .content .price {
   font-size: 2rem;
-  color: #007042;
+  color: #003a24;
 }
 
 .service {
@@ -519,7 +508,7 @@ section {
 
 .service .box-container h3 {
   font-size: 2rem;
-  color: #007042;
+  color: #003a24;
 }
 
 .service .box-container p {
@@ -578,7 +567,7 @@ section {
 }
 
 .reviews .slide .user span {
-  color: #007042;
+  color: #003a24;
   font-size: 1.5rem;
 }
 
@@ -616,7 +605,7 @@ section {
 }
 
 .blogs .slide .icons a:hover {
-  color: #007042;
+  color: #003a24;
 }
 
 .blogs .slide .icons a i {
@@ -626,7 +615,7 @@ section {
 
 .blogs .slide h3 {
   font-size: 2rem;
-  color: #007042;
+  color: #003a24;
 }
 
 .blogs .slide p {
@@ -643,15 +632,84 @@ section {
 }
 
 .newsletter .content {
-  max-width: 70rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4.5fr .5fr 4.5fr;
+      grid-template-columns: 4.5fr .5fr 4.5fr;
   margin: 1rem auto;
-  text-align: center;
 }
 
-.newsletter .content p {
+.newsletter .content .meeting {
+  width: 100%;
+}
+
+.newsletter .content .meeting input,
+.newsletter .content .meeting textarea,
+.newsletter .content .meeting .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  margin: 0 .5rem 2rem .5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.newsletter .content .meeting input:focus,
+.newsletter .content .meeting textarea:focus,
+.newsletter .content .meeting .form-control:focus {
+  border-color: #003a24;
+  outline: none;
+  -webkit-box-shadow: inset 0 0 1px #015d1f, 0 0 8px #01322e;
+          box-shadow: inset 0 0 1px #015d1f, 0 0 8px #01322e;
+}
+
+.newsletter .content .meeting input ::-webkit-input-placeholder,
+.newsletter .content .meeting textarea ::-webkit-input-placeholder,
+.newsletter .content .meeting .form-control ::-webkit-input-placeholder {
+  padding-left: 1rem;
+}
+
+.newsletter .content .meeting input :-ms-input-placeholder,
+.newsletter .content .meeting textarea :-ms-input-placeholder,
+.newsletter .content .meeting .form-control :-ms-input-placeholder {
+  padding-left: 1rem;
+}
+
+.newsletter .content .meeting input ::-ms-input-placeholder,
+.newsletter .content .meeting textarea ::-ms-input-placeholder,
+.newsletter .content .meeting .form-control ::-ms-input-placeholder {
+  padding-left: 1rem;
+}
+
+.newsletter .content .meeting input ::placeholder,
+.newsletter .content .meeting textarea ::placeholder,
+.newsletter .content .meeting .form-control ::placeholder {
+  padding-left: 1rem;
+}
+
+.newsletter .content .meeting .meetinglable {
+  display: inline-block;
+  max-width: 100%;
+  margin-left: 1rem;
   font-size: 1.5rem;
-  line-height: 2;
-  color: #10221b;
+}
+
+.newsletter .content .meeting .note {
+  height: auto;
+}
+
+.newsletter .content .meeting .btn {
+  line-height: auto;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.newsletter .content .meeting .btn:hover {
+  color: #fff;
+  background: #003a24;
+  -webkit-box-shadow: inset 0 0 1px #015d1f, 0 0 8px #01322e;
+          box-shadow: inset 0 0 1px #015d1f, 0 0 8px #01322e;
 }
 
 .newsletter .content form {
@@ -689,6 +747,12 @@ section {
   color: #10221b;
 }
 
+.newsletter .content .map iframe {
+  margin-top: 2rem;
+  width: 500px;
+  height: 300px;
+}
+
 .clients {
   padding: .5rem .5rem;
 }
@@ -707,7 +771,7 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: .5rem 5rem .5rem 10rem;
+  padding: .5rem 5rem .5rem 15rem;
 }
 
 .footer .box-container {
@@ -721,7 +785,7 @@ section {
 .footer .box-container .box h3 {
   font-size: 2rem;
   padding: 1rem 0;
-  color: #007042;
+  color: #fcd44e;
 }
 
 .footer .box-container .box .email {
@@ -736,7 +800,7 @@ section {
 }
 
 .footer .box-container .box a i {
-  color: #007042;
+  color: #fcd44e;
   padding-right: 2rem;
 }
 
@@ -748,7 +812,7 @@ section {
 }
 
 .footer .credit span {
-  color: #007042;
+  color: #fcd44e;
 }
 
 @media (max-width: 1200px) {
