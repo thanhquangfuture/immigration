@@ -355,62 +355,109 @@ section {
   text-transform: none;
 }
 
-.shop .slide {
-  border: 0.1rem solid #10221b;
-}
-
-.shop .slide:hover .image .icons {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.shop .slide .image {
+.product {
   position: relative;
+}
+
+.product .flex-container {
+  height: 80vh;
+  border-radius: 2%;
+  /* Safari */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden;
-  height: 30rem;
-  width: 100%;
 }
 
-.shop .slide .image img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.product .flex-container hr {
+  margin: 20px 0;
+  border-top: 1px solid #eee;
 }
 
-.shop .slide .image .icons {
-  width: 100%;
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
+.product .flex-container .flex-title {
+  color: #f1f1f1;
+  position: relative;
+  font-size: 4rem;
+  margin: auto;
   text-align: center;
-  z-index: 10;
-  -webkit-transform: translateY(7rem);
-          transform: translateY(7rem);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 20%;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
-.shop .slide .image a {
-  height: 4.5rem;
-  width: 4.5rem;
-  line-height: 4.5rem;
-  font-size: 1.7rem;
-  background: #10221b;
+.product .flex-container .flex-about {
+  opacity: 0;
+  color: #f1f1f1;
+  position: relative;
+  width: 70%;
+  font-size: 20px;
+  padding: 5%;
+  top: 20%;
+  line-height: 1.3;
+  margin: auto;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.product .flex-container .flex-about a {
   color: #fff;
 }
 
-.shop .content {
-  padding: 1rem 0;
-  text-align: center;
+.product .flex-container .flex-slide {
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  -webkit-box-flex: 1;
+          flex: 1;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
-.shop h3 {
-  font-size: 2rem;
-  color: #10221b;
+.product .flex-container .flex-slide:hover {
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
 }
 
-.shop .stars i {
-  font-size: 1.7rem;
-  color: #10221b;
+.product .flex-container .flex-slide:hover .flex-title {
+  display: none;
+}
+
+.product .flex-container .pro-0 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/startupvisa.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/startupvisa.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.product .flex-container .flex-about-home {
+  opacity: 0;
+}
+
+.product .flex-container .pro-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/quebec.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/quebec.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.product .flex-container .pro-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/canada.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/canada.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.product .flex-container .pro-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/bcvisa.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bcvisa.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .package {
@@ -851,6 +898,99 @@ section {
   color: #fcd44e;
 }
 
+@-webkit-keyframes aboutFlexSlide {
+  0% {
+    -webkit-box-flex: .5;
+            flex-grow: .5;
+  }
+  50% {
+    -webkit-box-flex: 4;
+            flex-grow: 4;
+  }
+  100% {
+    -webkit-box-flex: .5;
+            flex-grow: .5;
+  }
+}
+
+@keyframes aboutFlexSlide {
+  0% {
+    -webkit-box-flex: .5;
+        -ms-flex-positive: .5;
+            flex-grow: .5;
+  }
+  50% {
+    -webkit-box-flex: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4;
+  }
+  100% {
+    -webkit-box-flex: .5;
+        -ms-flex-positive: .5;
+            flex-grow: .5;
+  }
+}
+
+@-webkit-keyframes homeFlextitle {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 15%;
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 15%;
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 15%;
+  }
+}
+
+@keyframes homeFlextitle {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 15%;
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 15%;
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 15%;
+  }
+}
+
+@-webkit-keyframes flexAboutHome {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flexAboutHome {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 2rem;
@@ -864,6 +1004,45 @@ section {
   html {
     font-size: 55%;
     scroll-padding-top: 7rem;
+  }
+  .product .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product .flex-container .flex-title {
+    -webkit-transform: rotate(0deg) !important;
+            transform: rotate(0deg) !important;
+  }
+  .product .flex-container .flex-about {
+    padding: 0%;
+    border: 0px solid #f1f1f1;
+  }
+  .product .flex-container .flex-slide {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  .product .flex-container .home {
+    -webkit-animation: aboutFlexSlide 3s 1;
+            animation: aboutFlexSlide 3s 1;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .product .flex-container .flex-title-home {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 15%;
+    -webkit-animation: aboutFlexSlide 3s 1;
+            animation: aboutFlexSlide 3s 1;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .product .flex-container .flex-about-home {
+    -webkit-animation: aboutFlexSlide 3s 1;
+            animation: aboutFlexSlide 3s 1;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
 }
 
